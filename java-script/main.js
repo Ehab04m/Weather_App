@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded',  async function() {
 })
  async function getApi(term){
   try {
-    let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=656f61b879534fc0b6871258241412&q=${term}&days=3&aqi=yes&alerts=yes`)
+    let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=656f61b879534fc0b6871258241412&q=${term}&days=3&aqi=yes&alerts=yes`)
     if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); 
   }
   let data = await response.json()
